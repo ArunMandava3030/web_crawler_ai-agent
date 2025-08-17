@@ -145,6 +145,3 @@ MIT License. See [LICENSE](LICENSE) for details.
 * 🌐 [LinkedIn](https://linkedin.com/in/arun-mandava)
 * 💻 Data Scientist | AI & Web Crawling Enthusiast
 
-<img width="1919" height="969" alt="Screenshot 2025-08-17 110231" src="https://github.com/user-attachments/assets/e15bb396-369e-400a-8dd5-bbf1f1350067" />
-<img width="1919" height="1044" alt="Screenshot 2025-08-17 110513" src="https://github.com/user-attachments/assets/7a529df6-f367-41c9-83ba-22ca3b3833e0" />
-
