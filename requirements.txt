@@ -1,0 +1,8 @@
+streamlit
+crawl4ai
+chromadb
+modelscope
+torch
+transformers
+python-dotenv
+sentence-transformers
