@@ -85,8 +85,10 @@ Crawl a website, embed it, and store in ChromaDB:
 ```bash
 python scripts/run_pipeline.py https://www.chrismytton.com/plain-text-websites/
 ```
+![image alt](https://github.com/ArunMandava3030/web_crawler_ai-agent/blob/d4f92a6f761215adc197f3ee9db8e678106f1c51/Screenshot%202025-08-17%20110231.png)
 
 ### 2. Run Streamlit frontend
+![image alt](https://github.com/ArunMandava3030/web_crawler_ai-agent/blob/d4f92a6f761215adc197f3ee9db8e678106f1c51/Screenshot%202025-08-17%20110513.png)
 
 Launch the interactive dashboard:
 
