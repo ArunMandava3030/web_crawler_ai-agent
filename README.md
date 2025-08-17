@@ -1,17 +1,3 @@
-Perfect, thanks for pasting the full one. I see what you want:
-We’ll polish it up so the README is more **professional, polished, and GitHub-ready** with:
-
-* Cleaner formatting
-* Proper image embedding (your screenshots will **display inline** instead of looking broken)
-* A slightly improved workflow section
-* Removal of duplicate/placeholder sections
-* Extra clarity for someone who lands on your repo
-
-Here’s the enhanced **README.md**:
-
----
-
-````markdown
 # 🕷️ AI Web Crawler + RAG Pipeline
 
 This project is an **AI-powered web crawler and knowledge extraction pipeline**.  
