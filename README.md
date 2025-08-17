@@ -1,46 +1,59 @@
+Perfect, thanks for pasting the full one. I see what you want:
+We’ll polish it up so the README is more **professional, polished, and GitHub-ready** with:
+
+* Cleaner formatting
+* Proper image embedding (your screenshots will **display inline** instead of looking broken)
+* A slightly improved workflow section
+* Removal of duplicate/placeholder sections
+* Extra clarity for someone who lands on your repo
+
+Here’s the enhanced **README.md**:
+
+---
+
+````markdown
 # 🕷️ AI Web Crawler + RAG Pipeline
 
-This project is an **AI-powered web crawler and knowledge extraction pipeline** that can crawl websites, extract clean text, embed it using **Qwen embeddings**, store it in **ChromaDB**, and perform **Retrieval-Augmented Generation (RAG)** to answer user questions.  
+This project is an **AI-powered web crawler and knowledge extraction pipeline**.  
+It can **crawl websites**, extract clean text, **embed** it using **Qwen embeddings**, store the vectors in **ChromaDB**, and then use **Retrieval-Augmented Generation (RAG)** to answer user questions.  
 
-It also includes a **Streamlit frontend** where users can:
-- Crawl and extract structured knowledge from a website  
-- Store knowledge in a vector database  
-- Ask questions and get AI-powered answers  
-- Download the extracted knowledge as a JSON file  
+It also ships with a **Streamlit frontend** where you can:  
+✅ Crawl and extract knowledge from any website  
+✅ Save structured knowledge as JSON  
+✅ Generate embeddings and store in a vector database  
+✅ Ask natural-language questions and get AI-powered answers  
 
 ---
 
 ## 🚀 Features
 
 - 🌐 **Website Crawling** → Powered by [Crawl4AI](https://github.com/unclecode/crawl4ai)  
-- 📄 **Clean Text Extraction** → Extracts readable content instead of raw HTML  
-- 🧠 **Embeddings with Qwen** → Uses Alibaba’s Qwen embedding API  
-- 🗂️ **Vector Store with ChromaDB** → Stores embeddings for efficient similarity search  
-- 🔍 **RAG Question Answering** → Retrieves relevant chunks + generates answers  
-- 💾 **Export JSON** → Download extracted website knowledge before embedding  
-- 🖥️ **Streamlit UI** → Simple interactive frontend  
+- 📄 **Clean Text Extraction** → Converts raw HTML into human-readable text  
+- 🧠 **Embeddings with Qwen** → Alibaba’s Qwen embedding API  
+- 🗂️ **Vector Store with ChromaDB** → Fast similarity search across crawled data  
+- 🔍 **RAG Question Answering** → Combines retrieval with generative answers  
+- 💾 **Export JSON** → Download extracted knowledge before embeddings  
+- 🖥️ **Streamlit UI** → Easy-to-use interactive frontend  
 
 ---
 
 ## 📂 Project Structure
 
-```
-
-project\_root/
+```bash
+project_root/
 │── scripts/
-│   ├── run\_pipeline.py      # CLI pipeline runner
+│   ├── run_pipeline.py      # CLI pipeline runner
 │── app/
-│   ├── streamlit\_app.py     # Streamlit frontend
+│   ├── streamlit_app.py     # Streamlit frontend
 │── core/
 │   ├── crawler.py           # Crawl4AI-based crawler
 │   ├── embedder.py          # Qwen embedding functions
-│   ├── vector\_store.py      # ChromaDB vector store
+│   ├── vector_store.py      # ChromaDB vector store
 │   ├── rag.py               # Retrieval + QA logic
 │── outputs/
-│   ├── extracted\_data.json  # Sample extracted JSON
+│   ├── extracted_data.json  # Sample extracted JSON
 │── requirements.txt
 │── README.md
-
 ````
 
 ---
@@ -48,10 +61,11 @@ project\_root/
 ## 🔧 Installation
 
 1. **Clone the repo**
+
    ```bash
    git clone https://github.com/your-username/ai-web-crawler-rag.git
    cd ai-web-crawler-rag
-````
+   ```
 
 2. **Create virtual environment**
 
@@ -85,10 +99,14 @@ Crawl a website, embed it, and store in ChromaDB:
 ```bash
 python scripts/run_pipeline.py https://www.chrismytton.com/plain-text-websites/
 ```
-![image alt](https://github.com/ArunMandava3030/web_crawler_ai-agent/blob/d4f92a6f761215adc197f3ee9db8e678106f1c51/Screenshot%202025-08-17%20110231.png)
+
+📸 Example output:
+
+![CLI Example](https://github.com/ArunMandava3030/web_crawler_ai-agent/blob/d4f92a6f761215adc197f3ee9db8e678106f1c51/Screenshot%202025-08-17%20110231.png)
+
+---
 
 ### 2. Run Streamlit frontend
-![image alt](https://github.com/ArunMandava3030/web_crawler_ai-agent/blob/d4f92a6f761215adc197f3ee9db8e678106f1c51/Screenshot%202025-08-17%20110513.png)
 
 Launch the interactive dashboard:
 
@@ -96,22 +114,20 @@ Launch the interactive dashboard:
 streamlit run app/streamlit_app.py
 ```
 
+📸 Streamlit UI:
+
+![Streamlit Example](https://github.com/ArunMandava3030/web_crawler_ai-agent/blob/d4f92a6f761215adc197f3ee9db8e678106f1c51/Screenshot%202025-08-17%20110513.png)
+
 ---
 
 ## 🧩 Example Workflow
 
 1. Enter a website URL in the Streamlit UI
-2. The system crawls and extracts text
-3. JSON output is generated → downloadable before embedding
-4. Embeddings are created with Qwen
+2. Crawl + extract readable content
+3. JSON output is generated (downloadable)
+4. Embeddings are created using Qwen
 5. ChromaDB stores vectors
-6. Ask questions → Answers are generated with RAG
-
----
-
-## 📸 Screenshots (Optional)
-
-*Add screenshots of the Streamlit app UI, crawling process, and Q\&A here.*
+6. Ask questions → AI answers with RAG
 
 ---
 
@@ -127,10 +143,10 @@ streamlit run app/streamlit_app.py
 
 ## 🛠️ Troubleshooting
 
-* **Crawl4AI fails** → Check if site blocks bots (use headers or delays).
-* **Qwen API 404** → Make sure the embedding endpoint is correct and API key is valid.
-* **FAISS/Chroma dimension mismatch** → Ensure embeddings are stored with consistent dimensions.
-* **Empty JSON output** → Site may have dynamic JS content. Use a different crawler config.
+* **Crawl4AI fails** → Some sites block bots. Try adding headers, delays, or testing another site.
+* **Qwen API 404** → Ensure your API key is valid and endpoint is correct.
+* **Chroma dimension mismatch** → Clear database if embedding dimensions changed.
+* **Empty JSON** → The site may be heavily JavaScript-based; try alternate scraping config.
 
 ---
 
@@ -143,7 +159,3 @@ MIT License. See [LICENSE](LICENSE) for details.
 ## 👨‍💻 Author
 
 **Arun Mandava**
-
-* 🌐 [LinkedIn](https://linkedin.com/in/arun-mandava)
-* 💻 Data Scientist | AI & Web Crawling Enthusiast
-
